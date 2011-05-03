@@ -104,9 +104,11 @@ class Utena_SimpleXml2ObjectBridge {
 /////////////
 //test code
 /////////////
-//$auction = new Utena_Yahoo_Action("sample_auction");
-//$auction->setResponseClassName("Utena_SimpleXml2ObjectBridge");
-//$ret = $auction->Search("sample");
-//var_dump($auction->lastURL);
-////var_dump($ret);
+if( __FILE__ == $_SERVER["PHP_SELF"]){
+$auction = new Utena_Yahoo_Action("sample_auction");
+$auction->setResponseClassName("Utena_SimpleXml2ObjectBridge");
+$ret = $auction->Search("sample");
+var_dump($auction->lastURL);
+var_dump($ret);
 
+}
